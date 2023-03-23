@@ -1,17 +1,30 @@
 {
-  "name": "l06",
-  "version": "1.0.0",
-  "description": "my first module",
+  "name": "nodejs",
+  "version": "0.0.0",
+  "description": "paquete nodejs para SOS-F04",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "test-andalusian-bicycles-plans":"npx newman run ./tests/backend-salcha2.json -e ./tests/env/localhost.json",
+    "test-emergency-call-stats":"npx newman run ./tests/backend-sanpinand.json -e ./tests/env/localhost.json",
+    "test-self-employed-stats":"npx newman run ./tests/backend-joseg0.json -e ./tests/env/localhost.json",
+    "test": "npm run test-andalusian-bicycles-plans && npm run test-emergency-call-stats && npm run test-self-employed-stats"
+
   },
-  "author": "salcha2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS2223-17.git"
+  },
+  "author": "josgaroro",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS2223-17/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS2223-17#readme",
   "dependencies": {
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.2",
     "cool-ascii-faces": "^1.3.4",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nedb": "^1.8.0"
   }
 }

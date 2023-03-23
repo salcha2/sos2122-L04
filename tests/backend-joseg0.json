@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "7623e170-948c-4bcd-bb89-d50249900513",
+		"name": "F05-SOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25746364"
+	},
+	"item": [
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Madrid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Madrid",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats",
+						"Madrid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"genre\": \"Hombres\",\r\n        \"live_with\": \"q\",\r\n        \"territory\": \"Almería\",\r\n        \"employee\": 5,\r\n        \"value\": 6850,\r\n        \"year\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"genre\": \"Hombres\",\r\n        \"live_with\": 1,\r\n        \"territory\": \"Almería\",\r\n        \"employee\": 5,\r\n        \"value\": 6850,\r\n        \"year\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Almería/2019",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"genre\": \"Hombres\",\r\n        \"live_with\": 1,\r\n        \"territory\": \"Almer\",\r\n        \"employee\": 5,\r\n        \"value\": 6850,\r\n        \"year\": 2010\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Almería/2019",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats",
+						"Almería",
+						"2019"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Huelva",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats/Huelva",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats",
+						"Huelva"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"genre\": \"Hombres\",\r\n        \"live_with\": 1,\r\n        \"territory\": \"Jaén\",\r\n        \"employee\": 5,\r\n        \"value\": 6868,\r\n        \"year\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.appspot.com/api/v1/self-employed-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"self-employed-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

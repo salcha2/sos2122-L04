@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "bdaf936a-e079-441c-bf4b-ecd3054a5d39",
+		"name": "Gcloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25746364"
+	},
+	"item": [
+		{
+			"name": "GET /emergency-call-stats/Load",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /emergency-call-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Sevilla",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Sevilla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /RECURSO CONCRETO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Málaga/march",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Málaga",
+						"march"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /LISTA DE RECURSOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Sevilla",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Sevilla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /RECURSO CONCRETO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"province\": \"Málaga\",\r\n        \"month\": \"february\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Málaga/february",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Málaga",
+						"february"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /CONFLICT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"province\": \"Málaga\",\r\n        \"month\": \"february\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /CREATED",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"province\": \"Huelva\",\r\n        \"month\": \"may\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /BAD REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"betis\": \"Huelva\",\r\n        \"month\": \"may\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /LISTA DE RECURSOS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"province\": \"Huelva\",\r\n        \"month\": \"may\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /RECURSO CONCRETO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"province\": \"Sevilla\",\r\n        \"month\": \"january\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Sevilla/january",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Sevilla",
+						"january"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /BAD REQUEST",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"province\": \"Betis\",\r\n        \"month\": \"january\",\r\n        \"phone_call_activation_organization\": 848,\r\n        \"telematic_activation_organization\": 7763,\r\n        \"emergency_call\": 5506,\r\n        \"year\": 1234\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Sevilla/january",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Sevilla",
+						"january"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /TODO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /RECURSO CONCRETO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2223-17.ew.r.appspot.com/api/v1/emergency-call-stats/Sevilla/january",
+					"protocol": "https",
+					"host": [
+						"sos2223-17",
+						"ew",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"emergency-call-stats",
+						"Sevilla",
+						"january"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "05fe71bc-ca63-444a-b9d0-0cb5aa003eb8",
+		"name": "SOS2223-17",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25746364"
+	},
+	"item": [
+		{
+			"name": "Get /bicycles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Valencia/bicycles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"province\":\"Valencia\",\r\n      \"municipality\":\"agua\",\r\n      \"population\":1543905,\r\n      \"all_displacement\":3405252,\r\n      \"walking\":\"24,0\",\r\n      \"car_driver\":\"48,1\",\r\n      \"accompanying_car\":\"11,8\",\r\n      \"motorcycle\":\"3,1\",\r\n      \"bicycle\":\"1,3\",\r\n      \"public_transport\":\"8,2\",\r\n      \"other_ transportation\":\"0,4\",\r\n      \"year\":2017,\r\n      \"motorized_percentage\":\"65,1\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Valencia/bicycles 409",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 409\", function () {\r",
+							"    pm.response.to.have.status(409);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"province\":\"Valencia\",\r\n      \"municipality\":52,\r\n      \"population\":1543905,\r\n      \"all_displacement\":3405252,\r\n      \"walking\":\"24,0\",\r\n      \"car_driver\":\"48,1\",\r\n      \"accompanying_car\":\"11,8\",\r\n      \"motorcycle\":\"3,1\",\r\n      \"bicycle\":\"1,3\",\r\n      \"public_transport\":\"8,2\",\r\n      \"other_ transportation\":\"0,4\",\r\n      \"year\":2017,\r\n      \"motorized_percentage\":\"65,1\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get bicycles/province/year 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/Marbella",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"Marbella"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get exito bicycles/province/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains a single object\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array').that.has.lengthOf(1);\r",
+							"    pm.expect(jsonData[0]).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains the city of Sevilla in the 'province' field\", function () {\r",
+							"  var jsonData = pm.response.json();\r",
+							"  pm.expect(jsonData).to.be.an('array').that.has.lengthOf(1);\r",
+							"  pm.expect(jsonData[0]).to.have.property('province', 'Sevilla');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans?province=Sevilla&year=2016",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					],
+					"query": [
+						{
+							"key": "province",
+							"value": "Sevilla"
+						},
+						{
+							"key": "year",
+							"value": "2016"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get 400 bycicles/province/year_no_valido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/Sevilla/2024",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"Sevilla",
+						"2024"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /error405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"province\":\"Madrid\",\r\n      \"municipality\":52,\r\n      \"population\":1543905,\r\n      \"all_displacement\":3405252,\r\n      \"walking\":\"24,0\",\r\n      \"car_driver\":\"48,1\",\r\n      \"accompanying_car\":\"11,8\",\r\n      \"motorcycle\":\"3,1\",\r\n      \"bicycle\":\"1,3\",\r\n      \"public_transport\":\"8,2\",\r\n      \"other_ transportation\":\"0,4\",\r\n      \"year\":2017,\r\n      \"motorized_percentage\":\"65,1\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/Sevilla",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"Sevilla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /error405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"province\": \"Valencia\",\r\n        \"municipality\": 53,\r\n        \"population\": 1543905,\r\n        \"all_displacement\": 3405252,\r\n        \"walking\": \"24,0\",\r\n        \"car_driver\": \"48,1\",\r\n        \"accompanying_car\": \"11,8\",\r\n        \"motorcycle\": \"3,1\",\r\n        \"bicycle\": \"1,3\",\r\n        \"public_transport\": \"8,2\",\r\n        \"other_ transportation\": \"0,4\",\r\n        \"year\": 2017,\r\n        \"motorized_percentage\": \"65,1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /error400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"province\": \"Valencia\",\r\n        \"municipality\": 53,\r\n        \"population\": 1543905,\r\n        \"all_displacement\": 3405252,\r\n        \"walking\": \"24,0\",\r\n        \"car_driver\": \"48,1\",\r\n        \"accompanying_car\": \"11,8\",\r\n        \"motorcycle\": \"3,1\",\r\n        \"bicycle\": \"1,3\",\r\n        \"public_transport\": \"8,2\",\r\n        \"other_ transportation\": \"0,4\",\r\n        \"year\": 2017,\r\n        \"motorized_percentage\": \"65,1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/Sevilla/2013",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"Sevilla",
+						"2013"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT exitoso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"province\":\"Granada\",\r\n    \"municipality\":80,\r\n    \"population\":566830,\r\n    \"all_displacement\":1382297,\r\n    \"walking\":\"31,8\",\r\n    \"car_driver\":\"48,1\",\r\n    \"accompanying_car\":\"10,5\",\r\n    \"motorcycle\":\"3,5\",\r\n    \"bicycle\":\"2,2\",\r\n    \"public_transport\":\"9,3\",\r\n    \"other_ transportation\":\"0,8\",\r\n    \"year\":2015,\r\n    \"motorized_percentage\":\"62,8\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/Granada/2015",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"Granada",
+						"2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /province/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans?province=Sevilla&year=2016",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					],
+					"query": [
+						{
+							"key": "province",
+							"value": "Sevilla"
+						},
+						{
+							"key": "year",
+							"value": "2016"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /bycicles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /bicycles array vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"El array está vacío\", function () {\r",
+							"    var responseData = pm.response.json();\r",
+							"    pm.expect(responseData.length).to.equal(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans/loadInitialData",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get /bicycles array>1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/api/v1/andalusian-bicycle-plans",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"andalusian-bicycle-plans"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST_PORT",
+			"value": "https://sos2223-17.ew.r.appspot.com"
+		},
+		{
+			"key": "PORT_HOST",
+			"value": "http://localhost:8080"
+		}
+	]
+}
